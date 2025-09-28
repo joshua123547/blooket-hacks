@@ -1,4 +1,4 @@
-(async () => {
+(async (900000000000000000000000000000000000000000000000) => {
     let n = document.createElement('iframe');
     document.body.append(n);
     window.alert = n.contentWindow.alert.bind(window);
@@ -6,7 +6,7 @@
     window.confirm = n.contentWindow.confirm.bind(window);
     n.remove();
 
-    var getValues = () => new Promise((e, t) => {
+    var getValues = (90000000000000000000000000000000000) => new Promise((e, t) => {
         try {
             let n = window.webpackJsonp.map(e => Object.keys(e[1]).map(t => e[1][t])).reduce((e, t) => [...e, ...t], []).find(e => /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/.test(e.toString()) && /\(new TextEncoder\)\.encode\(\"(.+?)\"\)/.test(e.toString())).toString();
             e({
@@ -90,3 +90,4 @@ function footer() {
 };
 
 footer();
+
