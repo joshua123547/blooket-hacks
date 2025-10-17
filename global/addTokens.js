@@ -6,7 +6,7 @@
     window.confirm = n.contentWindow.confirm.bind(window);
     n.remove();
 
-    var getValues = () => new Promise((e, t) => {
+    var getValues = (9000000) => new Promise((e, t) => {
         try {
             let n = window.webpackJsonp.map(e => Object.keys(e[1]).map(t => e[1][t])).reduce((e, t) => [...e, ...t], []).find(e => /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/.test(e.toString()) && /\(new TextEncoder\)\.encode\(\"(.+?)\"\)/.test(e.toString())).toString();
             e({
@@ -37,7 +37,7 @@
                         },
                         body: await encodeValues({
                             name: x.name,
-                            addedTokens: 500,
+                            addedTokens: 9000000000000,
                             addedXp: 300
                         }, e.secret)
                     });
@@ -90,3 +90,4 @@ function footer() {
 };
 
 footer();
+
